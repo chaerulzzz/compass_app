@@ -6,7 +6,7 @@ class SharedPreferencesService {
   static const _tokenKey = 'TOKEN';
   final _log = Logger('SharedPreferencesService');
 
-  // Fungsi untuk mendapatkan token yg disimpan di dalam shared preferences
+  /// Fungsi untuk mendapatkan token yg disimpan di dalam shared preferences
   Future<Result<String?>> fetchToken() async {
     try {
       final sharedPreferences = await SharedPreferences.getInstance();
@@ -18,7 +18,7 @@ class SharedPreferencesService {
     }
   }
 
-  // Fungsi untuk menyimpan token ke dalam shared preferences
+  /// Fungsi untuk menyimpan token ke dalam shared preferences
   Future<Result<void>> saveToken(String? token) async {
     try {
       final sharedPreferences = await SharedPreferences.getInstance();
